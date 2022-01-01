@@ -2,7 +2,6 @@ body{
     font-family: 'Rubik' ,sans-serif;
     color: #777;
     margin: 0px;
-    margin-bottom: 100px;
 }
 .f{float: left;}
 .row{
@@ -44,6 +43,7 @@ a{text-decoration: none;}
     margin-right: 5px;
     background-color: rgb(255,255,255);
     transition: 0.6s;
+    cursor: pointer;
 }
 .socjal:hover{
     background-color: rgb(0,0,0);
@@ -731,7 +731,7 @@ div.premium-security-box:nth-of-type(6):hover{background-image: url('img/Premium
 /* Review Scrolling */
 .reviews-col3{
     margin: 0 auto 60px auto;
-    width: 100px;
+    width: 75px;
     height: 5px;
 }
 .dot{
@@ -749,3 +749,233 @@ div.premium-security-box:nth-of-type(6):hover{background-image: url('img/Premium
     cursor: pointer;
 }
 @keyframes reviews-scroll{from{left: 0;}to{left: -2365px;}}
+
+/*News*/
+.news{margin-top: 80px;}
+.news-text{text-align: center;}
+.news-text h1{
+    color: #222;
+    font-size: 50px;
+    font-weight: 500;
+}
+.news-text .text{
+    margin: 0 auto 0 auto;
+    width: 45%;
+}
+.news-row{
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+}
+.news-box{
+    border: 1px solid #e4e6e9;
+    padding: 35px;
+    margin: 15px;
+}
+.news-info{
+    font-size: 14px;
+    font-weight: 400;
+}
+.news-info img{
+    margin-right: 7px;
+    vertical-align: middle;
+}
+.news-box .text{
+    margin: 15px 0 15px 0;
+    font-size: 15px;
+}
+.news-info img:nth-of-type(2){margin-left: 20px;}
+.news-info span{
+    font-weight: 400;
+    font-size: 13px;
+}
+.news-box a{color: #222;}
+.news-box h4{
+    margin: 10px 0 10px 0;
+    font-size: 20px;
+    font-weight: 13px;
+    font-weight: 500;
+}
+.news-box h5{
+    margin: 0;
+    font-size: 15px;
+    font-weight: 500;
+}
+.news-box h5 span{
+    margin-left: 2px;
+    font-size: 18px;
+}
+/*News Hover Anims*/
+.news-box a:hover{
+    transition: 0.5s;
+    color: #f89429;
+}
+.news-box:hover{
+    border: none;
+    box-shadow: #000000 0px 2px 20px -10px;;
+    transition: 0.5s;
+}
+
+/* Introducing what matters */
+.what-matters{
+    background-color: #f1f1f1;
+    background-image: url('images/background/2.jpg');
+    background-size: 100%;
+    color: #222;
+    margin-top: 80px;
+}
+.what-matters-content{
+    padding: 80px 15px 140px 15px;
+}
+.what-matters-content h4{
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+.what-matters-content h1{
+    font-size: 60px;
+    font-weight: 500;
+    margin: 0;
+    width: 80%;
+}
+.what-matters-content .text{
+    color: #222;
+    width: 40%;
+    margin: 15px 0 25px 0;
+    font-size: 19px;
+}
+.what-matters-content .bt2{
+    width: 25%;
+    border-radius: 3px;
+    float: left;
+}
+.what-matters-content .talk{
+    border-bottom: 3px solid #7cb434;
+    margin-left: 40px;
+    font-size: 17px;
+}
+.what-matters-content a{
+    color: #222;
+}
+/* Clients */
+.clients .row{
+    position: relative;
+    height: 250px;
+}
+.Clients-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 80px 0;
+    overflow: hidden;
+    position: absolute;
+    left: 0px;
+    animation: Clients-anim 15s linear 0s infinite forwards;
+}
+.Clients-content img:hover{
+    transition: 0.5s;
+    opacity: 0.5;
+    filter: grayscale(100%);
+}
+@keyframes Clients-anim {
+    0%, 15% {left: 0;}
+    20%, 35% {left: -240px;}
+    40%, 55% {left: -480px;}
+    60%, 75% {left: -720px;}
+    80%, 95% {left: -960px;}
+    100% {left: -1200px;}
+}
+/* End section */
+.end-section{
+    background-color: #222;
+}
+.end-section-row1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #fff;
+    margin-top: 60px;
+    line-height: 28px;
+    border-bottom: 1px solid #2f2f2f;
+    padding-bottom: 50px;
+}
+.end-section-row1 .text{color: #fff;}
+.contacts{
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+.contacts p{margin: 0 0 0 55px;}
+.contacts:nth-of-type(2){background-image: url('img/tel-3.png');}
+.contacts:nth-of-type(3){background-image: url('img/email.png');}
+.contacts:nth-of-type(4){background-image: url('img/clock.png');}
+
+.end-section-row2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.end-section-box1 .socjal{
+    color: #aaa;
+    background-color: #393939;
+    margin: 15px 0 15px 0;
+}
+.end-section-row2{margin: 50px 0 100px 0;}
+
+.end-section-box1 .socjal:hover{background-color: #f89429; color: #fff;}
+.end-section-box1 .text{
+    color: #999;
+    margin-top: 18px;
+    line-height: 25px;
+    font-size: 14px;
+}
+.copyright{
+    font-size: 15px;
+    line-height: 25px;
+    color: #999;
+}
+.copyright a{
+    color: inherit;
+    text-decoration: underline;
+}
+.copyright a:hover{color: #f89429; transition: 0.5s;}
+.end-section-box1{width: 25%;}
+
+.end-section-row2 h4{
+    color: #fff;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+.end-section-list{
+    position: relative;
+    width: 20%;
+}
+.end-section-list ul{
+    position: absolute;
+    left: 0px;
+    list-style: none;
+    padding: 0;
+    line-height: 34px;
+}
+.end-section-list a{color: #999;}
+.end-section-list a:hover{color: #6a992c; transition: 0.5s;}
+.end-section-location{width: 25%;}
+.location{
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 15px 25px;
+    width: 80%;
+    margin-top: 25px;
+    cursor: pointer;
+    position: relative;
+}
+.location .text{
+    font-weight: 400; 
+    width: fit-content; 
+}
+.location img{
+    position: absolute;
+    right: 15px;
+    top: 24px;
+}
