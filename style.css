@@ -51,7 +51,11 @@ a{text-decoration: none;}
     font-weight: bold;
 }
 .logo{width: 25%;}
-.menu{width: 55%;}
+#bottom .row{height: 120px;}
+.menu{
+    width: 55%;
+    position: relative;
+}
 .search{width: 5%;}
 .security{width: 15%;}
 nav a{
@@ -66,8 +70,7 @@ nav a{
     padding: 0px 10px;
 }
 .menu a:hover{
-    background-color: #cdcdcd;
-    color: #fff;
+    color: #7cb434;
     transition: 0.2s;
 }
 .menu a.active{color: #7cb434;}
@@ -82,9 +85,54 @@ nav a{
     border-radius: 5px;
     margin-top: 35px;
 }
-.sec:hover{
-    background-color: #f99e3e;
+.sec:hover{background-color: #f99e3e;}
+/* Menu Dropdown */
+.menu-dropdown{
+    height: 120px;
+    position: absolute;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    width: 92px;
+    top: 0;
+    left: 75px;
 }
+.menu-dropdown:nth-of-type(2){
+    right: 34%;
+    left: initial;
+}
+.menu-dropdown .menu-dropdown-content{
+    position: relative;
+    width: 200px;
+    animation: dropdown-anim-off 1000ms ease-in-out 0s 1 forwards;
+}
+.menu-dropdown:hover{
+    overflow: visible;
+}
+.menu-dropdown:hover .menu-dropdown-content{
+    animation: dropdown-anim 1000ms ease-in-out 0s 1 forwards !important;
+}
+.menu-dropdown-content a{
+    line-height: initial;
+    font-size: 15px;
+    font-weight: 500;
+    color: #000;
+    width: 100%;
+    padding: 20px 10px;
+    background-color: #fff;
+}
+.menu-dropdown-content a:nth-of-type(n+2){
+    border-top: 0.5px solid #efefef;
+}
+@keyframes dropdown-anim{
+    from{left: -40px; opacity: 0;}
+    to{left: 0px; opacity: 1;}
+}
+@keyframes dropdown-anim-off{
+    from{left: 0; opacity: 1;}
+    to{left: 40px; opacity: 0;}
+}
+.menu-dropdown-content a:hover{background-color: #7cb434;}
 #slider{
     background: url('images/main-slider/image-1.jpg') center center;
     height: 720px;
@@ -385,20 +433,23 @@ div.premium-security-box:nth-of-type(6):hover{background-image: url('img/Premium
 /*Gallery*/
 .gallery{
     margin-top: 100px;
-    max-height: 1200px;
     overflow: hidden;
 }
 .gallery-box-main{max-height: 1200px;}
 .gallery .row{overflow: visible;}
 .gallery-box-text{
+    width: 95%;
     position: relative;
-    left: 30px;
+    margin: 0 auto 50px auto;
+}
+.gallery-box-text img{
+    width: 100%;
 }
 .gallery-text{
     width: 40%;
     padding: 20px;
-    position: relative;
-    bottom: 270px;
+    position: absolute;
+    bottom: 0px;
     left: 0px;
     background-color: #fff;
     box-shadow: #000000 -4px 7px 20px -20px;
@@ -419,13 +470,12 @@ div.premium-security-box:nth-of-type(6):hover{background-image: url('img/Premium
 .gallery-text a:hover{color: #6a992c;}
 
 .gallery-text img{
+    width: initial;
     top: 35px;
     left: 0;
     position: relative;
 }
 .gallery-box-images{
-    position: relative;
-    bottom: 230px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -496,13 +546,13 @@ div.premium-security-box:nth-of-type(6):hover{background-image: url('img/Premium
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    position: relative;
 }
 .stats-col1{
     box-sizing: border-box;
-    padding: 50px 50px 0px 350px;
+    padding: 80px;
     width: 60%;
     color: #fff;
-    padding-bottom: 90px;
 }
 .stats-col1 h1{
     font-size: 40px;
@@ -536,13 +586,13 @@ div.premium-security-box:nth-of-type(6):hover{background-image: url('img/Premium
 .stat-line:nth-of-type(3) .bar-main{width: 95%; animation: stat-3 1s ease-in-out 0s 1 forwards;}
 
 .stats-icons{
-    position: relative;
-    left: 50px;
-    top: 40px;
+    position: absolute;
+    left: 61.5%;
+    top: 15%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    max-height: 470px;
+    row-gap: 50px;
 }
 .stats-icon{
     height: 80px;
@@ -560,8 +610,7 @@ div.premium-security-box:nth-of-type(6):hover{background-image: url('img/Premium
     background-image: url('images/resource/image-1.jpg');
     background-repeat: no-repeat;
     padding-bottom: 0px;
-    background-size: 100% 560px;
-    height: 560px;
+    background-size: 100% 100%;
     width: 35%;
 }
 /*Statistics Animations*/
