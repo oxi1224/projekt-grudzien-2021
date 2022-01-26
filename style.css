@@ -55,6 +55,9 @@ a{text-decoration: none;}
 .menu{
     width: 55%;
     position: relative;
+    display: flex;
+    align-items: flex-start;
+    text-align: center;
 }
 .search{width: 5%;}
 .security{width: 15%;}
@@ -89,13 +92,10 @@ nav a{
 /* Menu Dropdown */
 .menu-dropdown{
     height: 120px;
-    position: absolute;
     overflow: visible;
     display: flex;
     flex-direction: column;
     width: 92px;
-    top: 0;
-    left: 75px;
 }
 .menu-dropdown:nth-of-type(2){
     right: 34%;
@@ -104,7 +104,9 @@ nav a{
 .menu-dropdown .menu-dropdown-content{
     position: relative;
     width: 200px;
-    animation: dropdown-anim-off 1000ms ease-in-out 0s 1 forwards;
+    animation: dropdown-anim-off 1000ms ease-in-out 0s 1 forwards !important;
+    visibility: hidden;
+    text-align: left;
 }
 .menu-dropdown:hover{
     overflow: visible;
@@ -112,6 +114,7 @@ nav a{
 .menu-dropdown:hover .menu-dropdown-content{
     animation: dropdown-anim 1000ms ease-in-out 0s 1 forwards !important;
 }
+.menu-dropdown-content a:hover{background-color: #7cb434; color: #fff;}
 .menu-dropdown-content a{
     line-height: initial;
     font-size: 15px;
@@ -125,14 +128,13 @@ nav a{
     border-top: 0.5px solid #efefef;
 }
 @keyframes dropdown-anim{
-    from{left: -40px; opacity: 0;}
-    to{left: 0px; opacity: 1;}
+    from{left: -40px; opacity: 0; visibility: hidden;}
+    to{left: 0px; opacity: 1; visibility: visible;}
 }
 @keyframes dropdown-anim-off{
-    from{left: 0; opacity: 1;}
-    to{left: 40px; opacity: 0;}
+    from{left: 0; opacity: 1; visibility: visible;}
+    to{left: -40px; opacity: 0; visibility: hidden;}
 }
-.menu-dropdown-content a:hover{background-color: #7cb434;}
 #slider{
     background: url('images/main-slider/image-1.jpg') center center;
     height: 720px;
