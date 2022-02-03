@@ -22,6 +22,9 @@
         </div>
     </div>
 </header>
+<div class="anchor-pointer">
+    <a href="#top">🠕</a>
+</div>
 <!-- Header -->
 <header id='bottom'>
     <div class="row ov">
@@ -34,28 +37,28 @@
                 <a href="">About</a>
                 <div class="menu-dropdown-content">
                     <a href="">About Us</a>
-                    <a href="">Team</a>
-                    <a href="">Faq's</a>
-                    <a href="">Pricing</a>
+                    <a href="team.html">Team</a>
+                    <a href="faq.html">Faq's</a>
+                    <a href="pricing.html">Pricing</a>
                 </div>
             </div>
             <div class="menu-dropdown f">
                 <a href="">Services</a>
                 <div class="menu-dropdown-content">
-                    <a href="">Service</a>
-                    <a href="">Service Detail</a>
+                    <a href="services.html">Service</a>
+                    <a href="servicedetails.html">Service Detail</a>
                 </div>
             </div>
-            <a href="gallery.html">Gallery</a>
+            <a href="gallery.html" class='active'>Gallery</a>
             <div class="menu-dropdown f">
                 <a href="">Blog</a>
                 <div class="menu-dropdown-content">
-                    <a href="">Blog Classic</a>
-                    <a href="">Blog Single</a>
-                    <a href="">Not Found</a>
+                    <a href="blogclassic.html">Blog Classic</a>
+                    <a href="blogsingle.html">Blog Single</a>
+                    <a href="notfound.html">Not Found</a>
                 </div>
             </div>
-            <a href="contact.html" class='active'>Contact Us</a>
+            <a href="contact.html">Contact Us</a>
         </nav>
         <div class="search f">
             <a href=""><img src="img/lupa.png"></a>
@@ -113,17 +116,8 @@
 </div>
 <!-- Map Section -->
 <div class="contact-map">
-    <div class="map-image">
-        <div class="map-image-box">
-            <h5>Melbourne</h5>
-            <div class="text">Vicotria, Australia</div>
-            <a href="">View larger map</a>
-            <div class="map-image-box-direction">
-                <img src="img/directions.png">
-                <a href="">Directions</a>
-            </div>
-        </div>
-        <img src="img/map.png">
+    <div class="map-container">
+        <div id="map"></div>
     </div>
     <div class="map-text">
         <div class="icons"><img src="images/icons/separater.png"><img src="img/2 lines.png"></div>
@@ -157,13 +151,13 @@
     </div>
 </div>
 <!-- Contact Bottom -->
-<div class="contact-contact-btm">
+<div class="contact-orange">
     <div class="contact-middle">
         <div class="row">
             <div class="contact-middle-content">
                 <div class="contact-middle-icon"><img src="img/tel-orange2.png"></div>
                 <div class="contact-middle-text"><span>Call us TODAY for a FREE Quote</span> - Your Home or</br> Commercial Security System : <span>700.231.0025</span></div>
-                <a href="#"><div class="contact-middle-button">FREE ESTIMATE</div></a>
+                <a href="#"><div class="contact-middle-button"><span class="contact-middle-btn-text"><img src="img/ico-2.png">FREE ESTIMATE</span></div></a>
             </div>
         </div>
     </div>
@@ -218,13 +212,21 @@
             </div>
             <div class="end-section-location">
                 <h4>Our Locations</h4>
-                <div class="location">
-                    <div class="text">California, USA</div>
-                    <img src="img/down-arrow.png">
+                <div class="location" onclick="toggleLocationDropdown()" id="locationMainBox">
+                    <p class="text">California, USA</p><span>></span>
+                </div>
+                <div class="location-dropdown" id="locationDropdownContent">
+                    <div class="text" id="locationOp1" onclick="optionSelect(1)">California, USA</div>
+                    <div class="text" id="locationOp2" onclick="optionSelect(2)">Chicago, USA</div>
+                    <div class="text" id="locationOp3" onclick="optionSelect(3)">New York, USA</div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBifsVwnrjvW6wOKE-Zwmhlx3tIGiuKj5o&callback=initMap&libraries=&v=weekly" async></script>
+<script src="javascript/dropdown.js"></script>
+<script src="javascript/map.js"></script>
+<script src="javascript/smooth-scroll.js"></script>
 </body>
 </html>

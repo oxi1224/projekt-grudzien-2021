@@ -22,6 +22,9 @@
         </div>
     </div>
 </header>
+<div class="anchor-pointer">
+    <a href="#top">🠕</a>
+</div>
 <!-- Header -->
 <header id='bottom'>
     <div class="row ov">
@@ -34,25 +37,25 @@
                 <a href="">About</a>
                 <div class="menu-dropdown-content">
                     <a href="">About Us</a>
-                    <a href="">Team</a>
-                    <a href="">Faq's</a>
-                    <a href="">Pricing</a>
+                    <a href="team.html">Team</a>
+                    <a href="faq.html">Faq's</a>
+                    <a href="pricing.html">Pricing</a>
                 </div>
             </div>
             <div class="menu-dropdown f">
                 <a href="">Services</a>
                 <div class="menu-dropdown-content">
-                    <a href="">Service</a>
-                    <a href="">Service Detail</a>
+                    <a href="services.html">Service</a>
+                    <a href="servicedetails.html">Service Detail</a>
                 </div>
             </div>
             <a href="gallery.html" class='active'>Gallery</a>
             <div class="menu-dropdown f">
                 <a href="">Blog</a>
                 <div class="menu-dropdown-content">
-                    <a href="">Blog Classic</a>
-                    <a href="">Blog Single</a>
-                    <a href="">Not Found</a>
+                    <a href="blogclassic.html">Blog Classic</a>
+                    <a href="blogsingle.html">Blog Single</a>
+                    <a href="notfound.html">Not Found</a>
                 </div>
             </div>
             <a href="contact.html">Contact Us</a>
@@ -133,7 +136,6 @@
 <!-- Gallery Button -->
 <div class="row">
     <div class="gallery-btn">
-        <div class="gallery-btn-hover"></div>
         <a href="" class="gallery-btn-text">
             <h5>LOAD MORE <span>></span></h5>
         </a>
@@ -189,13 +191,19 @@
             </div>
             <div class="end-section-location">
                 <h4>Our Locations</h4>
-                <div class="location">
-                    <div class="text">California, USA</div>
-                    <img src="img/down-arrow.png">
+                <div class="location" onclick="toggleLocationDropdown()" id="locationMainBox">
+                    <p class="text">California, USA</p><span>></span>
+                </div>
+                <div class="location-dropdown" id="locationDropdownContent">
+                    <div class="text" id="locationOp1" onclick="optionSelect(1)">California, USA</div>
+                    <div class="text" id="locationOp2" onclick="optionSelect(2)">Chicago, USA</div>
+                    <div class="text" id="locationOp3" onclick="optionSelect(3)">New York, USA</div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<script src="javascript/dropdown.js"></script>
+<script src="javascript/smooth-scroll.js"></script>
 </body>
 </html>

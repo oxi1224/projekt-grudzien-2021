@@ -5,6 +5,7 @@
         <title>Projekt strony grudzień 2021</title>
         <link rel="stylesheet" href="style.css">
         <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Rubik:wght@300;400;500;700;900&display=swap" rel="stylesheet"> 
+        <link rel="icon" type="image/x-icon" href="images/favicon.png">
     </head>
 <body>
 <!-- Contact Top -->
@@ -22,6 +23,9 @@
         </div>
     </div>
 </header>
+<div class="anchor-pointer">
+    <a href="#top">🠕</a>
+</div>
 <!-- Header -->
 <header id='bottom'>
     <div class="row ov">
@@ -29,30 +33,30 @@
             <img src="images/logo.png"/>
         </div>
         <nav class="menu f">
-            <a href="index.html" class='active'>Home</a>
+            <a href="index.html">Home</a>
             <div class="menu-dropdown f">
                 <a href="">About</a>
                 <div class="menu-dropdown-content">
                     <a href="">About Us</a>
-                    <a href="">Team</a>
-                    <a href="">Faq's</a>
-                    <a href="">Pricing</a>
+                    <a href="team.html">Team</a>
+                    <a href="faq.html">Faq's</a>
+                    <a href="pricing.html">Pricing</a>
                 </div>
             </div>
             <div class="menu-dropdown f">
                 <a href="">Services</a>
                 <div class="menu-dropdown-content">
-                    <a href="">Service</a>
-                    <a href="">Service Detail</a>
+                    <a href="services.html">Service</a>
+                    <a href="servicedetails.html">Service Detail</a>
                 </div>
             </div>
-            <a href="gallery.html">Gallery</a>
+            <a href="gallery.html" class='active'>Gallery</a>
             <div class="menu-dropdown f">
                 <a href="">Blog</a>
                 <div class="menu-dropdown-content">
-                    <a href="">Blog Classic</a>
-                    <a href="">Blog Single</a>
-                    <a href="">Not Found</a>
+                    <a href="blogclassic.html">Blog Classic</a>
+                    <a href="blogsingle.html">Blog Single</a>
+                    <a href="notfound.html">Not Found</a>
                 </div>
             </div>
             <a href="contact.html">Contact Us</a>
@@ -67,21 +71,23 @@
 </header>
 <!-- Main Page -->
 <div id='slider'>
-    <div class="sl">
+    <div class="sl" id="sl">
         <div class="row">
-            <div class='row-1'>
+            <div class="row-1" id='row-1'>
                 <p>PROTECTING WHAT MATTERS</p>
                 <h2>REAL SECURITY</br>
                     YOUR HOME NEED
                 </h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipis elit. Phasellus at sagittis elit dolore magna aliqua veniam quis nostrud.</p>
                 <div class="get-started">
-                    <a href=""><div class="bt2"><p>GET STARTED</p></div></a>
+                    <a href=""><div class="bt2"><img src="img/ico-2.png"><p> GET STARTED</p></div></a>
                 </div>
                 <div class="talk">
                     Talk With US 1.700.231.0025
                 </div>
             </div>
+            <div class="slider-arrow slider-arrowR" onclick="changeSliderBg();"><span>→</span></div>
+            <div class="slider-arrow slider-arrowL" onclick="changeSliderBg();"><span>←</span></div>
         </div>
     </div>
 </div>
@@ -150,8 +156,8 @@
         <div class="text">Ipsum dolor sit amet consect asetur adipisicing elit sedunas eiusmod temporas incididunt ut labore dolore magna aliqua.</div>
         <div class="premium-security-images">
             <div class="premium-security-box">
-                <img src="images/resource/security-4.jpg">
-                <div class="premium-security-bg">
+                <div class="premium-security-box-image"><div class="premium-sec-img-hov"><img src="images/resource/security-4.jpg"></div></div>
+                <div class="premium-security-box-bg">
                     <div class="premium-security-box-text">
                         <h5><a href="#">CCTV Cameras</a></h5>
                         <div class="text">Corem ipsum dolor sit amet consec exea dolore fugiatmagna exerd coas</div>
@@ -159,38 +165,48 @@
                 </div>
             </div>
             <div class="premium-security-box">
-                <img src="images/resource/security-5.jpg">
-                <div class="premium-security-box-text">
-                    <h5><a href="#">Theft Protection</a></h5>
-                    <div class="text">Corem ipsum dolor sit amet consec exea dolore fugiatmagna exerd coas</div>
+                <div class="premium-security-box-image"><div class="premium-sec-img-hov"><img src="images/resource/security-5.jpg"></div></div>
+                <div class="premium-security-box-bg">
+                    <div class="premium-security-box-text">
+                        <h5><a href="#">Theft Protection</a></h5>
+                        <div class="text">Corem ipsum dolor sit amet consec exea dolore fugiatmagna exerd coas</div>
+                    </div>
                 </div>
             </div>
             <div class="premium-security-box">
-                <img src="images/resource/security-6.jpg">
-                <div class="premium-security-box-text">
-                    <h5><a href="#">Fire Alarm Systems</a></h5>
-                    <div class="text">Corem ipsum dolor sit amet consec exea dolore fugiatmagna exerd coas</div>
+                <div class="premium-security-box-image"><div class="premium-sec-img-hov"><img src="images/resource/security-6.jpg"></div></div>
+                <div class="premium-security-box-bg">
+                    <div class="premium-security-box-text">
+                        <h5><a href="#">Fire Alarm Systems</a></h5>
+                        <div class="text">Corem ipsum dolor sit amet consec exea dolore fugiatmagna exerd coas</div>
+                    </div>
                 </div>
             </div>
             <div class="premium-security-box">
-                <img src="images/resource/security-7.jpg">
-                <div class="premium-security-box-text">
-                    <h5><a href="#">Touchscreen Keypads</a></h5>
-                    <div class="text">Corem ipsum dolor sit amet consec exea dolore fugiatmagna exerd coas</div>
+                <div class="premium-security-box-image"><div class="premium-sec-img-hov"><img src="images/resource/security-7.jpg"></div></div>
+                <div class="premium-security-box-bg">
+                    <div class="premium-security-box-text">
+                        <h5><a href="#">Touchscreen Keypads</a></h5>
+                        <div class="text">Corem ipsum dolor sit amet consec exea dolore fugiatmagna exerd coas</div>
+                    </div>
                 </div>
             </div>
             <div class="premium-security-box">
-                <img src="images/resource/security-8.jpg">
-                <div class="premium-security-box-text">
-                    <h5><a href="#">Doorbell Cameras</a></h5>
-                    <div class="text">Corem ipsum dolor sit amet consec exea dolore fugiatmagna exerd coas</div>
+                <div class="premium-security-box-image"><div class="premium-sec-img-hov"><img src="images/resource/security-8.jpg"></div></div>
+                <div class="premium-security-box-bg">
+                    <div class="premium-security-box-text">
+                        <h5><a href="#">Doorbell Cameras</a></h5>
+                        <div class="text">Corem ipsum dolor sit amet consec exea dolore fugiatmagna exerd coas</div>
+                    </div>
                 </div>
             </div>
             <div class="premium-security-box">
-                <img src="images/resource/security-9.jpg">
-                <div class="premium-security-box-text">
-                    <h5><a href="#">Home Automation</a></h5>
-                    <div class="text">Corem ipsum dolor sit amet consec exea dolore fugiatmagna exerd coas</div>
+                <div class="premium-security-box-image"><div class="premium-sec-img-hov"><img src="images/resource/security-9.jpg"></div></div>
+                <div class="premium-security-box-bg">
+                    <div class="premium-security-box-text">
+                        <h5><a href="#">Home Automation</a></h5>
+                        <div class="text">Corem ipsum dolor sit amet consec exea dolore fugiatmagna exerd coas</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -202,7 +218,7 @@
         <div class="contact-middle-content">
             <div class="contact-middle-icon"><img src="img/tel-2.png"></div>
             <div class="contact-middle-text"><span>Call us TODAY for a FREE Quote</span> - Your Home or</br> Commercial Security System : <span>700.231.0025</span></div>
-            <a href="#"><div class="contact-middle-button">FREE ESTIMATE</div></a>
+            <a href="contact.html"><div class="contact-middle-button"><span class="contact-middle-btn-text"><img src="img/ico-2.png">FREE ESTIMATE</span></div></a>
         </div>
     </div>
 </div>
@@ -214,7 +230,7 @@
                 <img src="images/gallery/1.jpg">
                 <div class="gallery-text">
                     <a href="#"><img src="img/arrow.png"></a>
-                    <h2><a href="#">Get State-of-the-Art Security Technologies from Teknik Security</a></h2>
+                    <h2><a href="contact.html">Get State-of-the-Art Security Technologies from Teknik Security</a></h2>
                     <div class="text">We protect your family like no-one. Dolore magna aliqut aliquip exa comod consequat duis irure dolor.</div>
                 </div>
             </div>
@@ -263,7 +279,7 @@
 <!-- Statistics -->
 <div class="stats">
     <div class="stats-main">
-        <div class="stats-col1">
+        <div class="stats-col1"">
             <div class="stats-text">
                 <h1>The Only Personalized Service From TEKNIK Security System Experts</h1>
                 <div class="text">Ulamco aliquip ex ea commodo da consequat duis aute irure dolor reprehen derit voluptate cillum afugiat nula pariatur vita sagittis diam facilisis convallis dictumst sed ipsum.</div>
@@ -400,7 +416,7 @@
                 <h1>Clients Reviews</h1>
                 <div class="text">Ipsum dolor sit amet consect asetur adipisicing elit sedunas eiusmod temporas incididunt ut labore dolore magna aliqua. </div>
             </div>
-            <div class="reviews-col2">
+            <div class="reviews-col2" id="review-slider">
                 <div class="review">
                     <div class="review-title"><h4>Real Security Products Installation.</h4></div>
                     <div class="text">At dolore magna aliqua umt enim ad minim veniam quis nostrud ulamco aliquip commodo da consequat duis aute irure dolor repreh derit voluptate cillum dolore afugiat ipsum nula. Lorem ipsum dolor amet, consectetur adipisicing elits.</div>
@@ -475,9 +491,9 @@
                 </div>
             </div>
             <div class="reviews-col3">
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
+                <div class="dot" id="dot1" onclick="pos(1)"></div>
+                <div class="dot" id="dot2" onclick="pos(2)"></div>
+                <div class="dot" id="dot3" onclick="pos(3)"></div>
             </div>
         </div>
     </div>
@@ -522,7 +538,7 @@
             <h4>PROTECTING WHAT MATTERS FOR YOU!</h4>
             <h1>INTRODUCING THE MOST EASIEST SECURITY SYSTEMS</h1>
             <div class="text">Aorem ipsum dolor sit amet consectetur adipiscing anim elit dolore magna aliqua veniam quis nostrud.</div>
-            <a href=""><div class="bt2"><p>REQUEST A FREE QUOTE</p></div></a>
+            <a href=""><div class="bt2"><img src="img/ico-2.png"><p style="position: relative !important;">REQUEST A FREE QUOTE</p></div></a>
             <div class="talk"><a href="">Talk With US <b>1.700.231.0025</b></a></div>
         </div>
     </div>
@@ -594,13 +610,21 @@
             </div>
             <div class="end-section-location">
                 <h4>Our Locations</h4>
-                <div class="location">
-                    <div class="text">California, USA</div>
-                    <img src="img/down-arrow.png">
+                <div class="location" onclick="toggleLocationDropdown()" id="locationMainBox">
+                    <p class="text">California, USA</p><span>></span>
+                </div>
+                <div class="location-dropdown" id="locationDropdownContent">
+                    <div class="text" id="locationOp1" onclick="optionSelect(1)">California, USA</div>
+                    <div class="text" id="locationOp2" onclick="optionSelect(2)">Chicago, USA</div>
+                    <div class="text" id="locationOp3" onclick="optionSelect(3)">New York, USA</div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<script src="javascript/dropdown.js"></script>
+<script src="javascript/slider.js"></script>
+<script src="javascript/reviews.js"></script>
+<script src="javascript/smooth-scroll.js"></script>
 </body>
 </html>
