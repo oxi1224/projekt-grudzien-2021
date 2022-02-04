@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Projekt strony grudzień 2021</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Rubik:wght@300;400;500;700;900&display=swap" rel="stylesheet"> 
+    </head>
+<body>
+<!-- Contact Top -->
+<header id='top' class='box'>
+    <div class='row'>
+        <div class="kontakt">
+            <img src="img/tel.png" class="poczta"><a href="tel:700.231.0025">Call:700.231.0025</a>
+            <img src="img/poczta.png" class="poczta"><a href="mailto:support@my-domain.com">Email:support@my-domain.com</a>
+        </div>
+        <div class="soc">
+            <div class="socjal">f</div>
+            <div class="socjal">t</div>
+            <div class="socjal">g</div>
+            <div class="socjal">in</div>
+        </div>
+    </div>
+</header>
+<div class="anchor-pointer">
+    <a href="#top">🠕</a>
+</div>
+<!-- Header -->
+<header id='bottom'>
+    <div class="row ov">
+        <div class="logo f">
+            <img src="images/logo.png"/>
+        </div>
+        <nav class="menu f">
+            <a href="index.html">Home</a>
+            <div class="menu-dropdown f">
+                <a href="" class='active'>About</a>
+                <div class="menu-dropdown-content">
+                    <a href="">About Us</a>
+                    <a href="team.html">Team</a>
+                    <a href="faq.html">Faq's</a>
+                    <a href="pricing.html">Pricing</a>
+                </div>
+            </div>
+            <div class="menu-dropdown f">
+                <a href="">Services</a>
+                <div class="menu-dropdown-content">
+                    <a href="services.html">Service</a>
+                    <a href="servicedetails.html">Service Detail</a>
+                </div>
+            </div>
+            <a href="gallery.html">Gallery</a>
+            <div class="menu-dropdown f">
+                <a href="">Blog</a>
+                <div class="menu-dropdown-content">
+                    <a href="blogclassic.html">Blog Classic</a>
+                    <a href="blogsingle.html">Blog Single</a>
+                    <a href="notfound.html">Not Found</a>
+                </div>
+            </div>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+        <div class="search f">
+            <a href=""><img src="img/lupa.png"></a>
+        </div>
+        <div class="security f">
+            <a href="" class="sec">security estimate</a>
+        </div>
+    </div>
+</header>
+<!-- Main Page -->
+<div id='slider-gallery'>
+    <div class="sl">
+        <div class="row">
+            <div class='row-1'>
+                <h1>PRICING PLANS</h1>
+                <p>Home <span>:</span> Our Pricing</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Pricing  -->
+<div class="row">
+    <div class="pricing">
+        <div class="pricing-row1">
+            <h2>Check Premium Security Packages</h2>
+            <div class="text">At dolore magna aliqua ut enim ad minim veniam, quis nostrud exercitation ulamco aliquip ex ea commodo da consequat duis aute irure dolor reprehen derit voluptate cillum dolore afugiat nula.</div>
+        </div>
+        <div class="pricing-row2">
+            <div class="pricing-toggle-op selected-option" id="pricing-op1" onclick="pricingToggle(1)"><h5>FOR RESIDENTIAL</h5></div>
+            <div class="pricing-toggle-bar">
+                <div class="pricing-toggle-ball" id="pricing-ball"></div>
+            </div>
+            <div class="pricing-toggle-op" id="pricing-op2" onclick="pricingToggle(2)"><h5>FOR COMMERCIAL</h5></div>
+        </div>
+        <div class="pricing-row3" id="pricing-cards">
+            <div class="pricing-card">
+                <div class="pricing-card-row1">
+                    <img src="images/icons/separater-1.png">
+                    <h3>Residential</br> Economy Package</h3>
+                </div>
+                <div class="pricing-card-row2">
+                    <h4><span>$99</span> / Month</h4>
+                </div>
+                <div class="pricing-card-row3">
+                    <ul>
+                        <li>Wire-Free Security System</li>
+                        <li>Full Home & Yard</li>
+                        <li>24/7 Alarm Monitoring</li>
+                        <li>Mobile App Support</li>
+                        <li style="opacity: 0.3;">Internal & External Siren</li>
+                        <li style="opacity: 0.3;">Video Monitoring</li>
+                    </ul>
+                    <div class="gallery-btn">
+                        <a href="" class="gallery-btn-text">
+                            <h5>ORDER PACKAGE</h5>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="pricing-card">
+                <div class="pricing-card-row1">
+                    <img src="images/icons/separater-1.png">
+                    <h3>Residential</br> Advanced Package</h3>
+                </div>
+                <div class="pricing-card-row2">
+                    <h4><span>$149</span> / Month</h4>
+                </div>
+                <div class="pricing-card-row3">
+                    <ul>
+                        <li>Wire-Free Security System</li>
+                        <li>Full Home & Yard</li>
+                        <li>24/7 Alarm Monitoring</li>
+                        <li>Mobile App Support</li>
+                        <li>Internal & External Siren</li>
+                        <li style="opacity: 0.3;">Video Monitoring</li>
+                    </ul>
+                    <div class="gallery-btn">
+                        <a href="" class="gallery-btn-text">
+                            <h5>ORDER PACKAGE</h5>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="pricing-card">
+                <div class="pricing-card-row1">
+                    <img src="images/icons/separater-1.png">
+                    <h3>Residential</br> Customized Package</h3>
+                </div>
+                <div class="pricing-card-row2">
+                    <h4><span>$199</span> / Month</h4>
+                </div>
+                <div class="pricing-card-row3">
+                    <ul>
+                        <li>Wire-Free Security System</li>
+                        <li>Full Home & Yard</li>
+                        <li>24/7 Alarm Monitoring</li>
+                        <li>Mobile App Support</li>
+                        <li>Internal & External Siren</li>
+                        <li>Video Monitoring</li>
+                    </ul>
+                    <div class="gallery-btn">
+                        <a href="" class="gallery-btn-text">
+                            <h5>ORDER PACKAGE</h5>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Section -->
+<div class="end-section">
+    <div class="row">
+        <div class="end-section-row1">
+            <div class="text">Visit Our Office : 68 Kings Street, North</br> Avenue California 33089 USA</div>
+            <div class="contacts"><p>Any Questions?</br> <b>700.231.0025</b></p></div>
+            <div class="contacts"><p>Send Email</br> <b>info@teknik.net</b></p></div>
+            <div class="contacts"><p>info@teknik.net</br> <b>9:00am - 6:00pm</p></b></div>
+        </div>
+        <div class="end-section-row2">
+            <div class="end-section-box1">
+                <img src="images/footer-logo.png">
+                <div class="text">At dolore magna aliqua ut enim ad minim veniam, quis nostrud exercitation ulamco aliquip ex ea commodo da consequat sed duis aut irure dolor reprehens.</div>
+                <div class="socjal">f</div>
+                <div class="socjal">t</div>
+                <div class="socjal">g</div>
+                <div class="socjal">in</div>
+                <div class="copyright">© 2020 TEKNIK Home Security.</br> <a href="">Terms</a> | <a href="">Privacy Policy</a></div>
+            </div>
+            <div class="end-section-list">
+                <h4>Features & Benefits</h4>
+                <div class="text">
+                    <ul>
+                        <li><a href="">Professional Monitoring</a></li>
+                        <li><a href="">Simple to Setup</a></li>
+                        <li><a href="">Many Customizations</a></li>
+                        <li><a href="">Best Mobile App</a></li>
+                        <li><a href="">Technical Staff</a></li>
+                        <li><a href="">Free Support Center</a></li>
+                        <li><a href="">Theft Protection</a></li>
+                        <li><a href="">SmartHome Services</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="end-section-list">
+                <h4>About TEKNIK</h4>
+                <div class="text">
+                    <ul>
+                        <li><a href="">About Teknik Security</a></li>
+                        <li><a href="">Work With Us</a></li>
+                        <li><a href="">Security Services</a></li>
+                        <li><a href="">Installation Packages</a></li>
+                        <li><a href="">CCTV Cameras</a></li>
+                        <li><a href="">Mission & Vision</a></li>
+                        <li><a href="">Clients Reviews</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="end-section-location">
+                <h4>Our Locations</h4>
+                <div class="location" onclick="toggleLocationDropdown()" id="locationMainBox">
+                    <p class="text">California, USA</p><span>></span>
+                </div>
+                <div class="location-dropdown" id="locationDropdownContent">
+                    <div class="text" id="locationOp1" onclick="optionSelect(1)">California, USA</div>
+                    <div class="text" id="locationOp2" onclick="optionSelect(2)">Chicago, USA</div>
+                    <div class="text" id="locationOp3" onclick="optionSelect(3)">New York, USA</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="javascript/dropdown.js"></script>
+<script src="javascript/smooth-scroll.js"></script>
+<script src="javascript/pricingtoggle.js"></script>
+</body>
+</html>
