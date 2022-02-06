@@ -137,12 +137,17 @@ nav a{
 .menu-dropdown .menu-dropdown-content{
     position: relative;
     width: 200px;
-    animation: dropdown-anim-off 500ms ease-in-out 0s 1 forwards !important;
+    transform: translateX(-20px);
+    opacity: 0;
+    visibility: hidden;
     text-align: left;
     z-index: 2;
+    transition: all 0.75s ease;
 }
 .menu-dropdown:hover .menu-dropdown-content{
-    animation: dropdown-anim 500ms ease-in-out 0s 1 forwards !important;
+    transform: translateX(0px);
+    opacity: 1;
+    visibility: visible;
 }
 .menu-dropdown-content a:hover{background-color: #7cb434; color: #fff;}
 .menu-dropdown-content a{
@@ -156,14 +161,6 @@ nav a{
 }
 .menu-dropdown-content a:nth-of-type(n+2){
     border-top: 0.5px solid #efefef;
-}
-@keyframes dropdown-anim{
-    from{left: -20px; opacity: 0; visibility: hidden;}
-    to{left: 0px; opacity: 1; visibility: visible;}
-}
-@keyframes dropdown-anim-off{
-    from{left: 0; opacity: 1; visibility: visible;}
-    to{left: -20px; opacity: 0; visibility: hidden;}
 }
 #slider{
     background: url('images/main-slider/image-1.jpg') center center;
@@ -1020,7 +1017,7 @@ nav a{
     padding: 5px;
     border-radius: 50px;
     margin: 30px 6px 90px 6px;
-    background-color: rgba(255,255,255,0.5);
+    background-color: #bec3c9;
 
 }
 .dot:hover{
@@ -1980,4 +1977,235 @@ nav a{
 .pricing-card-row3 .gallery-btn{
     margin: 10px auto;
     margin-bottom: 40px;
+}
+/* Service Details Page */
+/* Sidebar */
+.service-details{
+    margin: 90px 0;
+}
+.service-details .row{
+    display: flex;
+}
+.service-sidebar{
+    display: flex !important;
+    row-gap: 50px;
+    flex-direction: column;
+    margin-right: 50px;
+    min-width: 30%;
+}
+/* Services */
+.services{
+    box-shadow: 0px 0px 20px -10px #000;
+    padding-bottom: 40px;
+    position: relative;
+}
+.services h2, a{
+    color: #000;
+    transition: all 0.5s;
+}
+.services h2{
+    font-weight: 500;
+    padding: 40px 30px 15px 30px;
+    margin-bottom: 10px;
+}
+.services p{
+    padding: 15px 0;
+    padding-left: 30px;
+    margin: 0;
+    transition: all 0.5s;
+}
+.services span{
+    margin-right: 15px;
+}
+.services p:hover{
+    background-color: #f89429;
+}
+.services p:hover > a{
+    color: #fff;
+}
+/* Contact */
+.services-contact{
+    background-color: #286daf;
+    padding: 30px 45px;
+    position: relative;
+}
+.light{
+    color: #fff;
+}
+.services-contact h2{
+    color: #fff;
+    margin: 15px 0 35px 0;
+    font-size: 30px;
+    font-weight: 500;
+}
+.services-contact h3{
+    margin: 10px 0;
+    font-size: 25px;
+    font-weight: 500;
+}
+.services-contact span{
+    border-top: 1px solid #fff;
+    padding-top: 20px;
+}
+/* Opening Hours */
+.services-hours{
+    background-color: #7db436;
+    padding: 30px 45px;
+    position: relative;
+}
+.services-hours h2{
+    color: #fff;
+    margin: 15px 0 35px 0;
+    font-size: 30px;
+    font-weight: 500;
+}
+.services-hours h3{
+    margin: 10px 0;
+    font-size: 25px;
+    font-weight: 500;
+}
+.services-hours span{
+    border-top: 1px solid #fff;
+    padding-top: 20px;
+}
+.services-hours h4{
+    font-weight: 500;
+}
+/* Privacy */
+.services-privacy{
+    background-image: url('images/resource/package.jpg');
+    background-size: 100% 100%;
+    overflow: hidden;
+}
+.services-privacy-bg{
+    background-color: rgba(0,0,0,0.6);
+    width: 100%;
+    height: 100%;
+    padding: 80px 0;
+}
+.services-privacy h2{
+    margin: 0 auto;
+    width: fit-content;
+    text-align: center;
+    line-height: 40px;
+    font-size: 28px;
+    font-weight: 500;
+}
+.services-privacy h3{
+    margin: 0 auto;
+    width: fit-content;
+    text-align: center;
+    font-weight: 300;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.services-privacy .bt2{
+    margin: 0 auto;
+    width: 60%;
+}
+/* Main Box */
+/* top images */
+.service-main{
+    width: 100%;
+    box-sizing: border-box;
+}
+.service-img{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+/* Text */
+.service-main h2{
+    color: #000;
+    font-weight: 500;
+    font-size: 30px;
+}
+.service-main .text{
+    margin: 15px 0;
+}
+.service-slim{
+    display: flex;
+}
+.service-main h3{
+    color: #000;
+    font-size: 15px;
+    font-weight: 500;
+    width: 100%;
+    margin: 10px 0;
+}
+.service-main h3 img{
+    height: fit-content;
+    width: fit-content;
+    margin-right: 15px;
+}
+.service-main img{
+    width: 50%;
+}
+.service-slim-text{
+    max-width: 50%;
+    box-sizing: border-box;
+}
+.service-feature{
+    box-shadow: 0px 0px 15px -14px #000 inset;
+    padding: 50px 0;
+    position: relative;
+    max-width: 50%;
+    min-width: 50%;
+}
+.service-feature h2{
+    width: fit-content;
+    margin: 0 auto;
+    font-size: 25px;
+    font-weight: 500;
+}
+.service-feature p{
+    position: absolute;
+    top: 30px;
+    right: 15px;
+    font-size: 30px;
+    color: #f89429;
+}
+.service-feature:hover .line{
+    width: 100%;
+    background-color: #f89429;
+}
+.service-feature:nth-of-type(1) h2::before{
+    content: url('img/camera-black.png');
+    position: absolute;
+    left: 30px;
+    bottom: 35px;
+}
+.service-feature:nth-of-type(2) h2::before{
+    content: url('img/alarm-black.png');
+    position: absolute;
+    left: 30px;
+    bottom: 35px;
+}
+.service-feature:nth-of-type(3) h2::before{
+    content: url('img/keypad-black.png');
+    position: absolute;
+    left: 30px;
+    bottom: 35px;
+}
+.service-feature:nth-of-type(4) h2::before{
+    content: url('img/lock-black.png');
+    position: absolute;
+    left: 30px;
+    bottom: 35px;
+}
+.service-features{
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 1px solid #eee;
+    padding: 50px 0 30px 0;
+}
+.service-end img{
+    height: fit-content;
+    width: fit-content;
+    bottom: 5px;
+}
+.service-end{
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 25px;
 }
