@@ -8,10 +8,8 @@ function toggleLocationDropdown() {
     if (locationContentsvis == 'hidden') {
         locationContents.style.visibility = 'visible';
         locationMainBox.style.borderRadius = '2.5px 2.5px 0 0';
-        locationMainBox.querySelector('span').style.transform = "rotate(-90deg)";
     } else {
         locationContents.style.visibility = 'hidden';
-        locationMainBox.querySelector('span').style.transform = "rotate(90deg)";
     }
 }
 
